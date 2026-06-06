@@ -1,31 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <meta charset="utf-8" />
-  <title>自己紹介</title>
-  <meta name="description" content="自己紹介サイトです。" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSSファイルの適用 -->
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - 自己紹介</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-  <div class="page-wrapper">
-    <!-- ヘッダー -->
 
-    <main class="main-content">
-      <!-- メインビジュアル -->
+    <header class="header">
+        <div class="header-logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <nav class="header-nav">
+            <a href="#profile" class="nav-item">プロフィール</a>
+            <a href="#articles" class="nav-item">記事</a>
+        </nav>
+    </header>
 
-      <!-- プロフィール セクション -->
+    <main class="container">
+        
+        <div class="main-visual">
+            <img src="img/main_visual.jpg" alt="Main Visual">
+        </div>
 
-      <!-- 記事 セクション -->
+        <section id="profile" class="section profile-section">
+            <h2 class="section-title">プロフィール</h2>
+            <div class="profile-content">
+                <div class="profile-image">
+                    <img src="img/profile.png" alt="Profile Image">
+                </div>
+                <div class="profile-text">
+                    <h3 class="profile-name">あなたの名前</h3>
+                    <p class="profile-desc">
+                        ここにあなたの自己紹介文を記述します。秩父で消防職員として勤務しながら、圧倒的な市場価値を持つITエンジニアを目指して日々猛勉強中です。身体性を研ぎ澄ますトライアスロンが趣味です。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="articles" class="section articles-section">
+            <h2 class="section-title">記事</h2>
+            <div class="articles-grid">
+                
+                <article class="article-card">
+                    <img src="img/article.jpg" alt="Article 1" class="article-img">
+                    <h3 class="article-title">記事タイトル1</h3>
+                    <p class="article-desc">記事の概要テキストがここに入ります。GitとGitHub Pagesを使ったモダン開発フローの完全習得について。</p>
+                </article>
+
+                <article class="article-card">
+                    <img src="img/article.jpg" alt="Article 2" class="article-img">
+                    <h3 class="article-title">記事タイトル2</h3>
+                    <p class="article-desc">記事の概要テキストがここに入ります。Linuxコマンドと基本情報技術者試験のアルゴリズム攻略。</p>
+                </article>
+
+                <article class="article-card">
+                    <img src="img/article.jpg" alt="Article 3" class="article-img">
+                    <h3 class="article-title">記事タイトル3</h3>
+                    <p class="article-desc">記事の概要テキストがここに入ります。挫折を乗り越える生命力と、エンジニアとしての市場価値戦略。</p>
+                </article>
+
+            </div>
+        </section>
 
     </main>
 
-    <!-- フッター -->
+    <footer class="footer">
+        <p>&copy; 2026 Your Name. All Rights Reserved.</p>
+    </footer>
 
-  </div>
 </body>
-
 </html>

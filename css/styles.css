@@ -1,68 +1,142 @@
-/*-------------------------------------------
-	共通部分
-  -------------------------------------------*/
+/* 全体リセット・共通設定 */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-li {
-  list-style: none;
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: #000000;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/*-------------------------------------------
-  ページ全体
-  -------------------------------------------*/
-.page-wrapper {
-  width: 100%;
-  padding: 0 40px;
-  max-width: 1280px;
-  margin: 0 auto;
+/* -----------------------------------------
+   ヘッダー
+----------------------------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
 }
 
-/*-------------------------------------------
-  メインコンテンツ
-  -------------------------------------------*/
-.main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 120px;
+/* 条件1: メニュー部分は2つのメニューが24px間隔 */
+.header-nav {
+    display: flex;
+    gap: 24px; 
 }
 
-/*-------------------------------------------
-  これより下にコードを追加してください。
-  -------------------------------------------*/
-/*-------------------------------------------
-  ヘッダー
-  -------------------------------------------*/
+.nav-item {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
 
+/* 条件2: ホバーした時に不透明度を0.7にする */
+.nav-item:hover {
+    opacity: 0.7;
+}
 
-/*-------------------------------------------
-  メインビジュアル
-  -------------------------------------------*/
+/* -----------------------------------------
+   メインビジュアル
+----------------------------------------- */
+/* 条件3: 幅は親要素の100%、高さは640px、角の丸め半径は16px */
+.main-visual {
+    width: 100%;
+    height: 640px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
 
+.main-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-/*-------------------------------------------
-  セクション 共通部分
-  -------------------------------------------*/
+/* -----------------------------------------
+   共通セクション構造
+----------------------------------------- */
+/* 条件4&5共通: 「タイトル部分」と「コンテンツ部分」が40pxの間隔で縦並び */
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 80px;
+}
 
+.section-title {
+    font-size: 28px;
+    position: relative;
+}
 
-/* -------------------------------------------
-  プロフィール
-  -------------------------------------------*/
+/* -----------------------------------------
+   プロフィールセクション
+----------------------------------------- */
+/* 条件4: 「画像部分」と「文章部分」が40pxの間隔で横並び */
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-/* -------------------------------------------
-  記事
-  -------------------------------------------*/
+/* 条件4: 「文章部分」は「名前部分」と「説明部分」が16pxの間隔で縦並び */
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
+/* -----------------------------------------
+   記事セクション
+----------------------------------------- */
+/* 条件5: 記事が縦方向に40px、横方向に16pxの間隔で格子状に並ぶ */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 40px;
+    column-gap: 16px;
+}
 
-/*-------------------------------------------
-  フッター
-  -------------------------------------------*/
+/* 条件5: 各記事は「画像部分」「タイトル部分」「コンテンツ部分」が8pxの間隔で縦並び */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.article-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* -----------------------------------------
+   フッター
+----------------------------------------- */
+/* 条件6: 上下のパディングが40px、フォントサイズが小さい */
+.footer {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 12px;
+    color: #777;
+    margin-top: 80px;
+}
